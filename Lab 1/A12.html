@@ -4,9 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>A12</title>
 </head>
 <body>
-    
+    <script>
+         n = parseInt(prompt("Enter Number : "));
+        result = "";
+        arr1 = ["One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten"];
+        arr2=["Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"];
+        arr3=["","Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty","Ninety"];
+         if (isNaN(n)) {
+            document.write("Invalid Input");
+        } 
+        else if (n < 0 || n > 999) {
+            document.write("Out of Range");
+        }
+         else if (n === 0) {
+            result += "Zero";
+        }
+         else {
+            if (n >= 100) {
+                result += arr1[Math.floor(n / 100) - 1] + " Hundred ";
+                n %= 100;
+            }
+            if (n >= 20) {
+                result += arr3[Math.floor(n / 10) - 1] + " ";
+                n %= 10;
+            } else if (n > 10 && n < 20) {
+                result += arr2[n % 10 - 1] + " ";
+                
+            }
+            if (n !== 0) {
+                result += arr1[n - 1];
+            }
+        }
+          document.write(result);
+
+    </script>
 </body>
 </html>
