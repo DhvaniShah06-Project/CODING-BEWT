@@ -1,6 +1,6 @@
 const path = require('path') 
 const os = require('os')
-
+//path module works with file and url different 
 // console.log("Directory Name : ",__dirname);
 // console.log("File Name : ",__filename);
 // console.log("File Extension : ",path.extname(__filename));
@@ -46,12 +46,12 @@ const os = require('os')
 // console.log("Uptime in Seconds : ",uptimeSec);
 // console.log("Uptime in Hours : ",uptimeHours);
 
-const cpus = os.cpus();
-console.log("Number of CPU Cores : ",cpus.length);
-cpus.forEach((core,index)=>{
-    console.log(`Core ${index+1} Model : `,core.model)
-})
+// const cpus = os.cpus();
+// console.log("Number of CPU Cores : ",cpus.length);
+// cpus.forEach((core,index)=>{
+//     console.log(`Core ${index+1} Model : `,core.model)
+// })
 
-const network = os.networkInterfaces();
-console.log("\nNetwork Interfaces : ");
-console.log(network);
+// const network = os.networkInterfaces();
+// console.log("\nNetwork Interfaces : ");
+// console.log(network);
