@@ -64,16 +64,16 @@ const fs = require('fs');
 // })
 
 // 7  list all file in folder called documents fs.readdir  print file names one by one
-fs.readdir("my-data",(err,files)=>{
-    if(err){
-        console.log("Error : ",err);
-        return;
-    }
-    console.log("Files in documents : ",files)
-    files.forEach(file=>{
-        console.log(file);
-    })
-})
+// fs.readdir("my-data",(err,files)=>{
+//     if(err){
+//         console.log("Error : ",err);
+//         return;
+//     }
+//     console.log("Files in documents : ",files)
+//     files.forEach(file=>{
+//         console.log(file);
+//     })
+// })
 
  //8 copies file name source.txt to new file backup.txt fs.copyfile
 //  fs.copyFile("Output.txt","Backup.txt",(err)=>{
