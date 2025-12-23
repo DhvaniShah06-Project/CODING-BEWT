@@ -1,0 +1,50 @@
+
+ next()-> passes control to next middleware or route
+if next is not called request stop
+ Middleware is used to- 
+ -log request
+-  main authentication authorozation validation
+-handle error
+-parse request body
+
+Types of Middleware
+- Built in Middleware example
+app.use(express.json()) badha route ma call thase
+
+parses JSON request body
+makes req body available
+
+-->Custom Middleware
+app.use(req,res,next)=>{
+    .log  developer that is us ne khabar pade ke middleware execute thyu ke nai
+    bcs user login no kare to ene msg ave ke not login
+    next();
+}
+navu banayvu and particular route ma pass
+
+payment ne j middleware dekhadvy hoi or specific route ne middleware so ek variable ma badhu and call that
+const middleware = (req,res,next)
+app.use(middleware) jetla route hoi ema a thase
+diff between as object and app.use is this app.use badha ma call thai
+specific mate object and app.use ma badha ma by default call thai
+
+-->Route Level Middleware
+function authMiddleware(req,res,next){
+    if(req.query.admin==="true"){ ahiya je hoi e
+        next()
+    }else{
+        res.send("Access Denied")
+    }
+}
+
+app.get("/admin",authMiddleware,(req,res)=>{
+    res.send("Welcome Admin")
+})
+
+/admin?admin=true ->Welcome Admin here instead of true je value hoi e 
+/admin access denied
+
+ //static middleware
+ is used to serve static files like html css js and images directly to the client using express.static() without defining routes
+ __super global variable
+
